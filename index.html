@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Curriculum Tapia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+
+    <script src="https://kit.fontawesome.com/63469c3d87.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <nav class="navbar navbar_custom navbar-expand-lg navbar-dark bg-dark position-fixed">
+        <a class="navbar-brand" href="#">Menu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#carta1">Acerca <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#carta2">Portafolio</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#carta3">Resumé <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#carta4">Intereses <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#carta5">Contacto <span class="sr-only">(current)</span></a>
+                </li>
+        </div>
+    </nav>
+
+
+    <div class="container d-md-flex justify-content-center align-items-center">
+        <nav class="stepper_wrapper overflow-hidden">
+            <ul class="stepper  d-inline-flex justify-content-center">
+                <li id="stepperAboutId" class="stepper_item disable_select">
+                    <a href="#" class="stepper_link stepper_color1 stepper_link--active">
+                        <span class="stepper_icon">
+                            <i class="fa fa-address-card fa-lg"></i>
+                        </span>
+                        <span class="stepper_text">Acerca</span>
+                    </a>
+                </li>
+                <li id="stepperPortfolioId" class="stepper_item disable_select">
+                    <a href="#" class="stepper_link stepper_color2">
+                        <span class="stepper_icon">
+                            <i class="fas fa-code fa-lg"></i>
+                        </span>
+                        <span class="stepper_text">Portafolio</span>
+                    </a>
+                </li>
+                <li id="stepperResumeId" class="stepper_item disable_select">
+                    <a href="#" class="stepper_link stepper_color1">
+                        <span class="stepper_icon">
+                            <i class="fas fa-user-tie fa-lg"></i>
+                        </span>
+                        <span class="stepper_text">Resumé</span>
+                    </a>
+                </li>
+                <li id="stepperInterestsId" class="stepper_item disable_select">
+                    <a href="#" class="stepper_link stepper_color2">
+                        <span class="stepper_icon">
+                            <i class="fas fa-music fa-lg"></i>
+                        </span>
+                        <span class="stepper_text">Intereses</span>
+                    </a>
+                </li>
+                <li id="stepperContactId" class="stepper_item disable_select">
+                    <a href="#" class="stepper_link stepper_color1">
+                        <span class="stepper_icon">
+                            <i class="fas fa-phone fa-lg"></i>
+                        </span>
+                        <span class="stepper_text">Contacto</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container div_cartas">
+        <div id="carta1" class="carta row justify-content-sm-center">
+            <div class="col-12">
+                <div class="col-sm-12 col-md-6 presentacion align-items-center">
+                    <h1>Alejandro</h1>
+                    <h1>Tapia Alvarez</h1>
+                    <ul class="lista lista_presentacion">
+                        <li>Edad: 21</li>
+                        <li>Sexo: Hombre</li>
+                        <li>Nacionalidad: costarricense</li>
+                    </ul>
+                    <hr class="cruz cruz_c11x" />
+                    <hr class="cruz cruz_c11y" />
+
+                    <hr class="cruz cruz_c12x" />
+                    <hr class="cruz cruz_c12y" />
+
+                    <hr class="cruz cruz_c13x" />
+                    <hr class="cruz cruz_c13y" />
+                </div>
+            </div>
+            <div class="col-12 d-md-inline-flex d-sm-block etc_carta">
+                <div class="col-sm-12 col-md-4 py-extra lugar">
+                    <p><i class="fas fa-map-marker-alt fa-lg"></i> &nbsp;&nbsp;&nbsp;&nbsp; San Rafael, Escazú</p>
+                    <p><i class="fas fa-user-graduate fa-lg"></i> &nbsp;&nbsp;&nbsp;&nbsp; ITCR 1</p>
+                </div>
+                <div class="col-sm-12 col-md-8 espacio_foto justify-content-sm-center">
+                    <img class="foto" src="img/Foto.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="carta2" class="carta hidden row justify-content-sm-center">
+            <div class="col-12">
+                <div class="col-sm-12 col-md-6 portafolio1 align-items-center offset-md-2">
+                    <h1>Portafolio</h1>
+                    <p>Estudiante en el Instituto Tecnológico de Costa Rica</p>
+                    <img class="itcr" src="img/itcr.png" alt="">
+                    <hr class="cruz cruz_c21x" />
+                    <hr class="cruz cruz_c21y" />
+
+                    <hr class="cruz cruz_c22x" />
+                    <hr class="cruz cruz_c22y" />
+
+                    <hr class="cruz cruz_c23x" />
+                    <hr class="cruz cruz_c23y" />
+
+                    <hr class="cruz cruz_c24x" />
+                    <hr class="cruz cruz_c24y" />
+
+                    <hr class="cruz cruz_c25x" />
+                    <hr class="cruz cruz_c25y" />
+                </div>
+            </div>
+            <div class="col-12 d-md-inline-flex d-sm-block etc_carta">
+                <div class="col-sm-12 col-md-4 portafolio2">
+                    <h4>Idiomas:</h4>
+                    <ul>
+                        <li>Español (Nativo)</li>
+                        <li>Inglés (Avanzado)</li>
+                        <li>Coreano (Iniciando)</li>
+                    </ul>
+                    <h4>Cartas Recomendación:</h4>
+                    <ul>
+                        <li>Ignacio Trejos Zelaya</li>
+                        <li>Ivannia Cedras Quesada</li>
+                        <li>Jose Enrique Araya Monge</li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-8 espacio_portafolio3 text-left">
+                    <h4>Cursos llevados actualmente:</h4>
+                    <ul>
+                        <li>Inteligencia Artificial</li>
+                        <li>Aseguramiento de la Calidad</li>
+                        <li>Redes</li>
+                        <li>Desarrollo de Paginas Web</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="carta3" class="carta hidden row justify-content-sm-center">
+            <div class="col-12 ">
+                <div class="col-sm-12 col-md-6 resume1 align-items-center offset-md-3">
+                    <h1>Resumé</h1>
+                    <p>Proyectos en los que he trabajado</p>
+                    <img class="itcr" src="img/socialSeekers.PNG" alt="">
+                    <hr class="cruz cruz_c31x" />
+                    <hr class="cruz cruz_c31y" />
+
+                    <hr class="cruz cruz_c32x" />
+                    <hr class="cruz cruz_c32y" />
+
+                    <hr class="cruz cruz_c33x" />
+                    <hr class="cruz cruz_c33y" />
+
+                    <hr class="cruz cruz_c34x" />
+                    <hr class="cruz cruz_c34y" />
+
+                    <hr class="cruz cruz_c35x" />
+                    <hr class="cruz cruz_c35y" />
+                </div>
+            </div>
+            <div class="col-12 d-md-inline-flex d-sm-block etc_carta">
+                <div class="col-sm-12 col-md-6 resume2">
+                    <h4><a href="https://social-seekers-bbb14.web.app/home">Social Seekers:</a></h4>
+                    <ul>
+                        <li>Base de datos</li>
+                        <li>Parte del Frontend</li>
+                    </ul>
+                    <h4><a href="https://github.com/JustTapia/readersWriters">Readers Writers:</a></h4>
+                    <ul>
+                        <li>Inicializador</li>
+                        <li>Espía</li>
+                        <li>Lector Egoista</li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-6 resume3  justify-content-md-start justify-content-sm-center">
+                    <h4><a href="https://github.com/JustTapia/cpuScheduler">CPU Scheduler:</a></h4>
+                    <ul>
+                        <li>Formato de mensaje</li>
+                        <li>Mitad de algoritmos de organizacion </li>
+                    </ul>
+                    <h4><a href="">Esta página</a></h4>
+                    <ul>
+                        <li>Responsive con ayuda de bootstrap</li>
+                        <li>Diseño con ayuda de Susana Cob García</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="carta4" class="carta hidden row">
+            <div class="col-12">
+                <div class="col-sm-12 col-md-6 intereses1 offset-md-4">
+                    <h1>Intereses</h1>
+                    <h4>Generales:</h4>
+                    <ul>
+                        <li>Escuchar Música</li>
+                        <li>Tocar Piano</li>
+                        <li>Ver peliculas</li>
+                        <li>Lectura</li>
+                    </ul>
+                    <img class="dark_side" src="img/DarkSide.png" alt="">
+                    <hr class="cruz cruz_c41x" />
+                    <hr class="cruz cruz_c41y" />
+
+                    <hr class="cruz cruz_c42x" />
+                    <hr class="cruz cruz_c42y" />
+
+                    <hr class="cruz cruz_c43x" />
+                    <hr class="cruz cruz_c43y" />
+
+                    <hr class="cruz cruz_c44x" />
+                    <hr class="cruz cruz_c44y" />
+
+                    <hr class="cruz cruz_c45x" />
+                    <hr class="cruz cruz_c45y" />
+                </div>
+            </div>
+            <div class="col-12 d-md-inline-flex d-sm-block etc_carta">
+                <div class="col-sm-12 col-md-8 intereses2  justify-content-md-start justify-content-sm-center">
+                    <h4>Deportes:</h4>
+                    <ul>
+                        <li>Ajedrez</li>
+                        <li>Tenis</li>
+                        <li>Básquetbol</li>
+                        <li>Natacion</li>
+                        <li>Squash</li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-4 py-extra2 intereses3">
+                    <h4>Gustos en Desarrollo:</h4>
+                    <ul>
+                        <li>Cualquier reto en backend</li>
+                        <li>Cálculos complejos</li>
+                        <li>Crear una página según un diseño</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="carta5" class="carta hidden row">
+            <div class="col-12">
+                <div class="col-sm-12 col-md-6 contacto1 offset-md-5">
+                    <h1>Contacto</h1>
+                    <p>Datos para poder contactarme
+                        <br>
+                    </p>
+                    <p class="text-center">
+                        <i class="fas fa-id-card-alt contacto_fa"></i>
+                    </p>
+                    <hr class="cruz cruz_c51x" />
+                    <hr class="cruz cruz_c51y" />
+
+                    <hr class="cruz cruz_c52x" />
+                    <hr class="cruz cruz_c52y" />
+
+                    <hr class="cruz cruz_c53x" />
+                    <hr class="cruz cruz_c53y" />
+                </div>
+            </div>
+            <div class="col-12 d-md-inline-flex d-sm-block etc_carta">
+                <div class="col-sm-12 col-md-8 contacto2  justify-content-md-start p-md-6">
+                    <p><i class="far fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp; a.tapia1908@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> &nbsp;&nbsp;&nbsp;&nbsp; 86809615</p>
+                </div>
+                <div class="col-sm-12 col-md-4 py-extra contacto3">
+                    <p>
+                        <i class="fab fa-linkedin-in fa-lg"></i> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a
+                            href="https://www.linkedin.com/in/alejandro-tapia-alvarez-38209b20b/0000000000000">alejandro-tapia-alvarez-38209b20b/</a>
+                    </p>
+                    <p>
+                        <i class="fab fa-github"></i> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://github.com/JustTapia">JustTapia</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

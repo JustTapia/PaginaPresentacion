@@ -1,0 +1,984 @@
+:root {
+    --color-active: #3500d3;
+    --color-active-inverse: #fff;
+    --color-unactive: #282828;
+    --color-secondary: #240090;
+    --color-secondary-inverse: #000;
+    --color-hover: #3500d3;
+    --color-card: #190061;
+    --color-text-default: black;
+    --color-text-default-2: #969FAA;
+    --size-badge: 20px;
+}
+
+body {
+    background-image: url("../img/Fondo1.png");
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: none;
+}
+
+.navbar-custom {
+    background-color: var(--color-unactive);
+    color: var(--color-text-default-2);
+}
+
+.disable_select {
+    user-select: none;
+    /* supported by Chrome and Opera */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+}
+
+.stepper {
+    font-family: Arial;
+    padding: 0;
+    margin: auto 0;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    overflow: hidden;
+}
+
+.stepper_item:first-child .stepper_link {
+    padding-left: var(--size-badge);
+}
+
+.stepper_item:last-child .stepper_link {
+    padding-right: var(--size-badge);
+}
+
+.stepper_link {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0 10px 40px;
+    position: relative;
+}
+
+.stepper_color1 {
+    background: var(--color-secondary);
+    color: var(--color-text-default);
+    outline: none;
+}
+
+.stepper_color1::after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    /* Go big on the size, and let overflow hide */
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid var(--color-secondary);
+    outline: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 100%;
+    z-index: 2;
+}
+
+.stepper_color1::before {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid var(--color-secondary);
+    outline: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: 1px;
+    left: 100%;
+    z-index: 1;
+}
+
+.stepper_color2 {
+    background-color: var(--color-unactive);
+    color: var(--color-text-default-2);
+    outline: none;
+}
+
+.stepper_color2::after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    /* Go big on the size, and let overflow hide */
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid var(--color-unactive);
+    outline: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 100%;
+    z-index: 2;
+}
+
+.stepper_color2::before {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid var(--color-unactive);
+    outline: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: 1px;
+    left: 100%;
+    z-index: 1;
+}
+
+.stepper_icon {
+    margin-bottom: 10px;
+}
+
+.stepper_link:hover {
+    background-color: var(--color-hover);
+    color: var(--color-text-default);
+}
+
+.stepper_link:hover::before {
+    border-left-color: var(--color-hover);
+}
+
+.stepper_link:hover::after {
+    border-left-color: var(--color-hover);
+}
+
+.stepper_link--active, .stepper_link--active:hover {
+    background-color: var(--color-active);
+    color: var(--color-active-inverse);
+}
+
+.stepper_link--active::after, .stepper_link--active:hover::after {
+    border-left-color: var(--color-active);
+}
+
+.stepper_link--active::before, .stepper_link--active:hover::before {
+    border-left-color: var(--color-active);
+}
+
+.stepper_link-active:focus, .stepper_link--active::before:focus, .stepper_link--active:hover::before:focus {
+    outline-color: var(--color-active);
+}
+
+.main {
+    display: grid;
+    height: 253.4335px;
+    width: 506.867px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.carta {
+    font-family: Verdana, sans-serif;
+    color: white;
+    height: 253.4335px;
+}
+
+.cruz {
+    position: absolute;
+    margin: 0;
+    z-index: 90;
+    height: 0.5px;
+    width: 20px;
+    display: block;
+    background-color: var(--color-text-default-2);
+}
+
+.lista {
+    list-style: none;
+    position: inherit;
+    color: var(--color-text-default-2);
+    z-index: 1;
+}
+
+#carta1 {
+    position: relative;
+    order: 1;
+}
+
+.presentacion {
+    position: inherit;
+    z-index: 1;
+    height: 240px;
+    background-color: var(--color-active);
+}
+
+.cruz_c11x {
+    bottom: 0;
+    right: 29.5%;
+    transform: translateX(-50%);
+}
+
+.cruz_c11y {
+    bottom: 0;
+    right: 29.5%;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.cruz_c12x {
+    bottom: 0;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.cruz_c12y {
+    bottom: 0;
+    right: 0;
+    transform: translateX(50%) rotate(90deg);
+}
+
+.cruz_c13x {
+    bottom: 47.5%;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.cruz_c13y {
+    bottom: 47.5%;
+    right: 0;
+    transform: translateX(50%) rotate(90deg);
+}
+
+.etc_carta {
+    position: inherit;
+    z-index: 0;
+}
+
+.lugar {
+    position: inherit;
+    display: block;
+    z-index: 1;
+    background-color: var(--color-card);
+    text-align: left;
+    color: var(--color-text-default-2);
+}
+
+.espacio_foto {
+    position: inherit;
+    z-index: 1;
+    background-color: var(--color-secondary);
+    text-align: center;
+    justify-content: center;
+}
+
+.foto {
+    padding-left: 10%;
+    height: 100%;
+    width: auto;
+}
+
+#carta2 {
+    position: relative;
+    margin-top: 100%;
+    order: 2;
+}
+
+.portafolio1 {
+    position: inherit;
+    z-index: 1;
+    height: 240px;
+    background-color: var(--color-active);
+}
+
+.itcr {
+    margin: 0 150px;
+    height: 50%;
+    width: auto;
+}
+
+.cruz_c21x {
+    bottom: 0;
+    left: 33.25%;
+    transform: translateX(-50%);
+}
+
+.cruz_c21y {
+    bottom: 0;
+    left: 33.25%;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.cruz_c22x {
+    bottom: 0;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.cruz_c22y {
+    bottom: 0;
+    right: 0;
+    transform: translateX(50%) rotate(90deg);
+}
+
+.cruz_c23x {
+    bottom: 47.5%;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.cruz_c23y {
+    bottom: 47.5%;
+    right: 0;
+    transform: translateX(50%) rotate(90deg);
+}
+
+.cruz_c24x {
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.cruz_c24y {
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.cruz_c25x {
+    bottom: 47.5%;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.cruz_c25y {
+    bottom: 47.5%;
+    left: 0;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.portafolio2 {
+    position: inherit;
+    display: block;
+    z-index: 1;
+    background-color: var(--color-card);
+    text-align: left;
+}
+
+.portafolio1 p {
+    color: var(--color-text-default-2)
+}
+
+.portafolio2 h4 {
+    position: inherit;
+    color: var(--color-active);
+    z-index: 1;
+}
+
+.portafolio2 ul {
+    position: inherit;
+    color: var(--color-text-default-2);
+    z-index: 1;
+    padding-left: 0;
+}
+
+.espacio_portafolio3 {
+    position: inherit;
+    z-index: 1;
+    background-color: var(--color-secondary);
+    color: var(--color-text-default-2);
+}
+
+.espacio_portafolio3 h4 {
+    position: inherit;
+    color: var(--color-active);
+    z-index: 1;
+    margin-left: 23rem;
+}
+
+.espacio_portafolio3 ul {
+    margin-left: 23rem;
+}
+
+.portafolio3 {
+    justify-content: right;
+}
+
+#carta3 {
+    position: relative;
+    margin-top: 100%;
+    order: 2;
+}
+
+.resume1 {
+    position: inherit;
+    z-index: 1;
+    height: 240px;
+    background-color: var(--color-active);
+}
+
+.resume1 p {
+    position: inherit;
+    color: var(--color-text-default-2);
+    z-index: 1;
+}
+
+.social_seekers {
+    margin: 0 auto;
+    height: 50%;
+    width: auto;
+}
+
+.cruz_c31x {
+    bottom: 0;
+    right: 46%;
+    transform: translateX(-50%);
+}
+
+.cruz_c31y {
+    bottom: 0;
+    right: 46%;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.cruz_c32x {
+    bottom: 0;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.cruz_c32y {
+    bottom: 0;
+    right: 0;
+    transform: translateX(50%) rotate(90deg);
+}
+
+.cruz_c33x {
+    bottom: 47.5%;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.cruz_c33y {
+    bottom: 47.5%;
+    right: 0;
+    transform: translateX(50%) rotate(90deg);
+}
+
+.cruz_c34x {
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.cruz_c34y {
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.cruz_c35x {
+    bottom: 47.5%;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.cruz_c35y {
+    bottom: 47.5%;
+    left: 0;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.resume2 {
+    position: inherit;
+    display: block;
+    z-index: 1;
+    background-color: var(--color-card);
+    text-align: left;
+    color: var(--color-text-default-2);
+}
+
+.resume2 h4 {
+    color: var(--color-active);
+    position: relative;
+    z-index: 100;
+}
+
+.resume2 a {
+    color: var(--color-active);
+}
+
+.resume3 {
+    position: inherit;
+    z-index: 1;
+    background-color: var(--color-secondary);
+    text-align: left;
+    color: var(--color-text-default-2);
+}
+
+.resume3 h4 {
+    position: inherit;
+    z-index: 1;
+    margin-left: 18rem;
+}
+
+.resume3 a {
+    color: var(--color-active);
+}
+
+.resume3 ul {
+    margin-bottom: 0;
+    margin-left: 18rem;
+}
+
+#carta4 {
+    position: relative;
+    margin-top: 100%;
+    order: 2;
+}
+
+.intereses1 {
+    position: inherit;
+    z-index: 1;
+    height: 240px;
+    background-color: var(--color-active);
+}
+
+.intereses1 h4 {
+    position: inherit;
+    color: var(--color-text-default-2);
+    z-index: 1;
+}
+
+.intereses1 ul {
+    position: inherit;
+    color: var(--color-text-default-2);
+    z-index: 1;
+}
+
+.dark_side {
+    position: absolute;
+    right: 10%;
+    top: 25%;
+    height: 50%;
+    width: auto;
+}
+
+.cruz_c41x {
+    bottom: 0;
+    right: 29.5%;
+    transform: translateX(-50%);
+}
+
+.cruz_c41y {
+    bottom: 0;
+    right: 29.5%;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.cruz_c42x {
+    bottom: 0;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.cruz_c42y {
+    bottom: 0;
+    right: 0;
+    transform: translateX(50%) rotate(90deg);
+}
+
+.cruz_c43x {
+    bottom: 47.5%;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.cruz_c43y {
+    bottom: 47.5%;
+    right: 0;
+    transform: translateX(50%) rotate(90deg);
+}
+
+.cruz_c44x {
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.cruz_c44y {
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.cruz_c45x {
+    bottom: 47.5%;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.cruz_c45y {
+    bottom: 47.5%;
+    left: 0;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.intereses2 {
+    position: inherit;
+    z-index: 1;
+    background-color: var(--color-secondary);
+    text-align: left;
+}
+
+.intereses2 h4 {
+    color: var(--color-text-default-2);
+    margin-left: 25%;
+}
+
+.intereses2 ul {
+    margin-left: 25%;
+    color: var(--color-text-default-2)
+}
+
+.intereses3 {
+    position: inherit;
+    display: block;
+    z-index: 1;
+    background-color: var(--color-card);
+    text-align: left;
+    color: var(--color-text-default-2);
+}
+
+#carta5 {
+    position: relative;
+    margin-top: 100%;
+    order: 2;
+}
+
+.contacto1 {
+    position: inherit;
+    z-index: 1;
+    height: 240px;
+    background-color: var(--color-active);
+}
+
+.contacto1 p {
+    position: inherit;
+    color: var(--color-text-default-2);
+    z-index: 1;
+}
+
+.contacto_fa {
+    font-size: 700%;
+}
+
+.cruz_c51x {
+    bottom: 0;
+    left: 46.5%;
+    transform: translateX(50%);
+}
+
+.cruz_c51y {
+    bottom: 0;
+    left: 46.5%;
+    transform: translateX(50%) rotate(90deg);
+}
+
+.cruz_c52x {
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.cruz_c52y {
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.cruz_c53x {
+    bottom: 47.5%;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.cruz_c53y {
+    bottom: 47.5%;
+    left: 0;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.contacto2 {
+    position: inherit;
+    z-index: 1;
+    background-color: var(--color-secondary);
+    text-align: left;
+}
+
+.p-md-6 {
+    padding: 5rem !important;
+}
+
+.contacto2 p {
+    font-size: 24px;
+    color: var(--color-text-default-2)
+}
+
+.contacto3 {
+    position: inherit;
+    display: block;
+    z-index: 1;
+    background-color: var(--color-card);
+    text-align: left;
+    color: var(--color-text-default-2);
+}
+
+.contacto3 a {
+    color: var(--color-active);
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeout-top {
+    0% {
+        margin-top: 0;
+        order: 1;
+        z-index: -0;
+    }
+    1% {
+        margin-top: 1;
+        order: 2;
+        z-index: -0;
+    }
+    99% {
+        margin-top: -99%;
+        order: 2;
+        z-index: -0;
+    }
+    100% {
+        margin-top: -100%;
+        order: 2;
+        z-index: -0;
+    }
+}
+
+@keyframes fadein-top {
+    0% {
+        margin-top: 100%;
+        order: 2;
+        z-index: -0;
+    }
+    1% {
+        margin-top: 99%;
+        order: 1;
+        z-index: -0;
+    }
+    99% {
+        margin-top: 1%;
+        order: 1;
+        z-index: -0;
+    }
+    100% {
+        margin-top: 0%;
+        order: 1;
+        z-index: -0;
+    }
+}
+
+@keyframes fadein-bottom {
+    0% {
+        margin-top: -100%;
+        order: 2;
+        z-index: -0;
+    }
+    /*
+    1%{
+        margin-top: -99%;
+        order: 2;
+        z-index: -0;
+    }*/
+    99% {
+        margin-top: -1%;
+        order: 1;
+        z-index: -0;
+    }
+    100% {
+        margin-top: 0;
+        order: 1;
+        z-index: -0;
+    }
+}
+
+@keyframes fadeout-bottom {
+    0% {
+        margin-top: 0%;
+        order: 1;
+        z-index: -0;
+    }
+    /*
+    1%{
+        margin-top: 1%;
+        order: 1;
+        z-index: -0;
+    }*/
+    99% {
+        margin-top: 99%;
+        order: 2;
+        z-index: -0;
+    }
+    100% {
+        margin-top: 100%;
+        order: 2;
+        z-index: -0;
+    }
+}
+
+@media(min-width: 993px) {
+    body {
+        overflow-y: hidden;
+    }
+    .div_cartas {
+        margin-top: auto;
+    }
+    .carta {
+        transform: translateY(25%);
+    }
+    .etc_carta {
+        margin-top: -10%;
+        height: 100%;
+    }
+    .py-extra {
+        padding: 8rem 0 6rem 4rem;
+    }
+    .py-extra2 {
+        padding: 7rem 0 6rem 4rem;
+    }
+}
+
+@media(max-width: 992px) {
+    body {
+        background-image: url("../img/Fondo2.png");
+        background-size: unset;
+        background-position: center;
+        overflow: scroll;
+    }
+    .navbar {
+        display: block;
+        z-index: 99;
+        width: 100%;
+    }
+    .stepper_wrapper {
+        display: none;
+    }
+    .lista {
+        margin-top: 2.5rem;
+        padding-left: 0;
+    }
+    .col-12-sm {
+        max-width: 50%;
+    }
+    .presentacion {
+        text-align: center;
+    }
+    .foto {
+        width: 100%;
+        height: auto;
+    }
+    .div_cartas {
+        padding-top: 60px;
+    }
+    carta {
+        animation: none;
+    }
+    .cruz {
+        display: none;
+    }
+    .py-extra {
+        padding: 0;
+    }
+    #carta1 {
+        height: auto;
+    }
+    .espacio_foto {
+        margin-top: -4.5%;
+    }
+    #carta2 {
+        height: auto;
+        margin-top: 5%;
+    }
+    .itcr {
+        display: block;
+        margin: 0 auto;
+    }
+    .espacio_portafolio3 {
+        margin-top: -4.3%;
+    }
+    .espacio_portafolio3 h4 {
+        margin: 0;
+    }
+    .espacio_portafolio3 ul {
+        margin: 0;
+    }
+    #carta3 {
+        height: auto;
+        margin-top: 5%;
+    }
+    .social_seekers {
+        display: block;
+        margin: 0 auto;
+    }
+    .resume3 {
+        margin-top: -4.4%;
+    }
+    .resume3 h4 {
+        margin: 0;
+    }
+    .resume3 ul {
+        margin: 0;
+    }
+    #carta4 {
+        height: auto;
+        margin-top: 5%;
+    }
+    .dark_side {
+        display: none;
+    }
+    .intereses3 {
+        margin-top: -4.4%;
+    }
+    .intereses2 h4 {
+        margin-left: 0;
+    }
+    .intereses2 ul {
+        margin-left: 0;
+    }
+    #carta5 {
+        height: auto;
+        margin-top: 5%;
+    }
+    .contacto3 {
+        margin-top: -4.4%;
+    }
+    .p-md-6 {
+        padding: 0rem !important;
+    }
+    .contacto2 p {
+        font-size: auto;
+        color: var(--color-text-default-2)
+    }
+}
