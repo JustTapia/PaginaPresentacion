@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar_custom navbar-expand-lg navbar-dark bg-dark position-fixed">
+    <nav class="navbar navbar_custom navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#">Menu</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,26 +25,26 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#carta1">Acerca <span class="sr-only">(current)</span></a>
+                <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a id="btnAcercaId" class="nav-link" href="#carta1">Acerca</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#carta2">Portafolio</a>
+                <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a class="nav-link" href="#carta2" data-bs-toggle="collapse">Resume</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#carta3">Resumé <span class="sr-only">(current)</span></a>
+                <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a class="nav-link" href="#carta3">Portafolio</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#carta4">Intereses <span class="sr-only">(current)</span></a>
+                <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a class="nav-link" href="#carta4">Intereses</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#carta5">Contacto <span class="sr-only">(current)</span></a>
+                <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a class="nav-link" href="#carta5">Contacto</a>
                 </li>
         </div>
     </nav>
 
 
-    <div class="container d-md-flex justify-content-center align-items-center">
+    <div class="container stepper_front d-md-flex justify-content-center align-items-center">
         <nav class="stepper_wrapper overflow-hidden">
             <ul class="stepper  d-inline-flex justify-content-center">
                 <li id="stepperAboutId" class="stepper_item disable_select">
@@ -55,20 +55,20 @@
                         <span class="stepper_text">Acerca</span>
                     </a>
                 </li>
-                <li id="stepperPortfolioId" class="stepper_item disable_select">
+                <li id="stepperResumeId" class="stepper_item disable_select">
                     <a href="#" class="stepper_link stepper_color2">
+                        <span class="stepper_icon">
+                            <i class="fas fa-user-tie fa-lg"></i>
+                        </span>
+                        <span class="stepper_text">Resume</span>
+                    </a>
+                </li>
+                <li id="stepperPortfolioId" class="stepper_item disable_select">
+                    <a href="#" class="stepper_link stepper_color1">
                         <span class="stepper_icon">
                             <i class="fas fa-code fa-lg"></i>
                         </span>
                         <span class="stepper_text">Portafolio</span>
-                    </a>
-                </li>
-                <li id="stepperResumeId" class="stepper_item disable_select">
-                    <a href="#" class="stepper_link stepper_color1">
-                        <span class="stepper_icon">
-                            <i class="fas fa-user-tie fa-lg"></i>
-                        </span>
-                        <span class="stepper_text">Resumé</span>
                     </a>
                 </li>
                 <li id="stepperInterestsId" class="stepper_item disable_select">
@@ -125,8 +125,8 @@
 
         <div id="carta2" class="carta hidden row justify-content-sm-center">
             <div class="col-12">
-                <div class="col-sm-12 col-md-6 portafolio1 align-items-center offset-md-2">
-                    <h1>Portafolio</h1>
+                <div class="col-sm-12 col-md-6 resume1 align-items-center offset-md-2">
+                    <h1>Resume</h1>
                     <p>Estudiante en el Instituto Tecnológico de Costa Rica</p>
                     <img class="itcr" src="img/itcr.png" alt="">
                     <hr class="cruz cruz_c21x" />
@@ -146,7 +146,7 @@
                 </div>
             </div>
             <div class="col-12 d-md-inline-flex d-sm-block etc_carta">
-                <div class="col-sm-12 col-md-4 portafolio2">
+                <div class="col-sm-12 col-md-4 resume2">
                     <h4>Idiomas:</h4>
                     <ul>
                         <li>Español (Nativo)</li>
@@ -160,7 +160,7 @@
                         <li>Jose Enrique Araya Monge</li>
                     </ul>
                 </div>
-                <div class="col-sm-12 col-md-8 espacio_portafolio3 text-left">
+                <div class="col-sm-12 col-md-8 espacio_resume3 text-left">
                     <h4>Cursos llevados actualmente:</h4>
                     <ul>
                         <li>Inteligencia Artificial</li>
@@ -174,8 +174,8 @@
 
         <div id="carta3" class="carta hidden row justify-content-sm-center">
             <div class="col-12 ">
-                <div class="col-sm-12 col-md-6 resume1 align-items-center offset-md-3">
-                    <h1>Resumé</h1>
+                <div class="col-sm-12 col-md-6 portafolio1 align-items-center offset-md-3">
+                    <h1>Portafolio</h1>
                     <p>Proyectos en los que he trabajado</p>
                     <img class="itcr" src="img/socialSeekers.PNG" alt="">
                     <hr class="cruz cruz_c31x" />
@@ -195,7 +195,7 @@
                 </div>
             </div>
             <div class="col-12 d-md-inline-flex d-sm-block etc_carta">
-                <div class="col-sm-12 col-md-6 resume2">
+                <div class="col-sm-12 col-md-6 portafolio2">
                     <h4><a href="https://social-seekers-bbb14.web.app/home">Social Seekers:</a></h4>
                     <ul>
                         <li>Base de datos</li>
@@ -208,7 +208,7 @@
                         <li>Lector Egoista</li>
                     </ul>
                 </div>
-                <div class="col-sm-12 col-md-6 resume3  justify-content-md-start justify-content-sm-center">
+                <div class="col-sm-12 col-md-6 portafolio3  justify-content-md-start justify-content-sm-center">
                     <h4><a href="https://github.com/JustTapia/cpuScheduler">CPU Scheduler:</a></h4>
                     <ul>
                         <li>Formato de mensaje</li>
@@ -315,6 +315,7 @@
         </div>
 
     </div>
+    <p class="footnote">Nota: todos los titulos con este color son links</p>
     <script src="js/index.js"></script>
 </body>
 

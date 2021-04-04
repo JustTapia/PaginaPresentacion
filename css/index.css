@@ -8,6 +8,7 @@
     --color-card: #190061;
     --color-text-default: black;
     --color-text-default-2: #969FAA;
+    --color-hyperlink: #4400ff;
     --size-badge: 20px;
 }
 
@@ -36,6 +37,11 @@ body {
     /* Firefox */
     -ms-user-select: none;
     /* Internet Explorer/Edge */
+}
+
+.stepper_front {
+    position: relative;
+    z-index: 99;
 }
 
 .stepper {
@@ -182,15 +188,6 @@ body {
     outline-color: var(--color-active);
 }
 
-.main {
-    display: grid;
-    height: 253.4335px;
-    width: 506.867px;
-    overflow: hidden;
-    position: relative;
-    margin: 0 auto;
-}
-
 .carta {
     font-family: Verdana, sans-serif;
     color: white;
@@ -296,7 +293,7 @@ body {
     order: 2;
 }
 
-.portafolio1 {
+.resume1 {
     position: inherit;
     z-index: 1;
     height: 240px;
@@ -369,7 +366,7 @@ body {
     transform: translateX(-50%) rotate(90deg);
 }
 
-.portafolio2 {
+.resume2 {
     position: inherit;
     display: block;
     z-index: 1;
@@ -377,42 +374,42 @@ body {
     text-align: left;
 }
 
-.portafolio1 p {
+.resume1 p {
     color: var(--color-text-default-2)
 }
 
-.portafolio2 h4 {
+.resume2 h4 {
     position: inherit;
-    color: var(--color-active);
+    color: var(--color-text-default-2);
     z-index: 1;
 }
 
-.portafolio2 ul {
+.resume2 ul {
     position: inherit;
     color: var(--color-text-default-2);
     z-index: 1;
     padding-left: 0;
 }
 
-.espacio_portafolio3 {
+.espacio_resume3 {
     position: inherit;
     z-index: 1;
     background-color: var(--color-secondary);
     color: var(--color-text-default-2);
 }
 
-.espacio_portafolio3 h4 {
+.espacio_resume3 h4 {
     position: inherit;
-    color: var(--color-active);
+    color: var(--color-text-default-2);
     z-index: 1;
     margin-left: 23rem;
 }
 
-.espacio_portafolio3 ul {
+.espacio_resume3 ul {
     margin-left: 23rem;
 }
 
-.portafolio3 {
+.resume3 {
     justify-content: right;
 }
 
@@ -422,14 +419,14 @@ body {
     order: 2;
 }
 
-.resume1 {
+.portafolio1 {
     position: inherit;
     z-index: 1;
     height: 240px;
     background-color: var(--color-active);
 }
 
-.resume1 p {
+.portafolio1 p {
     position: inherit;
     color: var(--color-text-default-2);
     z-index: 1;
@@ -501,7 +498,7 @@ body {
     transform: translateX(-50%) rotate(90deg);
 }
 
-.resume2 {
+.portafolio2 {
     position: inherit;
     display: block;
     z-index: 1;
@@ -510,17 +507,17 @@ body {
     color: var(--color-text-default-2);
 }
 
-.resume2 h4 {
-    color: var(--color-active);
+.portafolio2 h4 {
+    color: var(--color-hyperlink);
     position: relative;
     z-index: 100;
 }
 
-.resume2 a {
+.portafolio2 a {
     color: var(--color-active);
 }
 
-.resume3 {
+.portafolio3 {
     position: inherit;
     z-index: 1;
     background-color: var(--color-secondary);
@@ -528,17 +525,17 @@ body {
     color: var(--color-text-default-2);
 }
 
-.resume3 h4 {
+.portafolio3 h4 {
     position: inherit;
     z-index: 1;
     margin-left: 18rem;
 }
 
-.resume3 a {
-    color: var(--color-active);
+.portafolio3 a {
+    color: var(--color-hyperlink);
 }
 
-.resume3 ul {
+.portafolio3 ul {
     margin-bottom: 0;
     margin-left: 18rem;
 }
@@ -747,11 +744,20 @@ body {
 }
 
 .contacto3 a {
-    color: var(--color-active);
+    color: var(--color-hyperlink);
 }
 
 .hidden {
     display: none;
+}
+
+.footnote {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    background-color: var(--color-secondary-inversey);
+    color: var(--color-hyperlink);
 }
 
 @keyframes fadeout-top {
@@ -881,16 +887,20 @@ body {
         display: block;
         z-index: 99;
         width: 100%;
+        top: 0;
     }
     .stepper_wrapper {
+        display: none;
+    }
+    carta {
+        animation: none;
+    }
+    .cruz {
         display: none;
     }
     .lista {
         margin-top: 2.5rem;
         padding-left: 0;
-    }
-    .col-12-sm {
-        max-width: 50%;
     }
     .presentacion {
         text-align: center;
@@ -899,61 +909,57 @@ body {
         width: 100%;
         height: auto;
     }
-    .div_cartas {
-        padding-top: 60px;
-    }
-    carta {
-        animation: none;
-    }
-    .cruz {
-        display: none;
-    }
     .py-extra {
         padding: 0;
     }
     #carta1 {
         height: auto;
+        margin-top: 0px;
+        padding-top: 60px;
     }
     .espacio_foto {
         margin-top: -4.5%;
     }
     #carta2 {
         height: auto;
-        margin-top: 5%;
+        margin-top: 0px;
+        padding-top: 60px;
     }
     .itcr {
         display: block;
         margin: 0 auto;
     }
-    .espacio_portafolio3 {
+    .espacio_resume3 {
         margin-top: -4.3%;
     }
-    .espacio_portafolio3 h4 {
+    .espacio_resume3 h4 {
         margin: 0;
     }
-    .espacio_portafolio3 ul {
+    .espacio_resume3 ul {
         margin: 0;
     }
     #carta3 {
         height: auto;
-        margin-top: 5%;
+        margin-top: 0px;
+        padding-top: 60px;
     }
     .social_seekers {
         display: block;
         margin: 0 auto;
     }
-    .resume3 {
+    .portafolio3 {
         margin-top: -4.4%;
     }
-    .resume3 h4 {
+    .portafolio3 h4 {
         margin: 0;
     }
-    .resume3 ul {
+    .portafolio3 ul {
         margin: 0;
     }
     #carta4 {
         height: auto;
-        margin-top: 5%;
+        margin-top: 0px;
+        padding-top: 60px;
     }
     .dark_side {
         display: none;
@@ -969,7 +975,8 @@ body {
     }
     #carta5 {
         height: auto;
-        margin-top: 5%;
+        margin-top: 0px;
+        padding-top: 60px;
     }
     .contacto3 {
         margin-top: -4.4%;
@@ -980,5 +987,8 @@ body {
     .contacto2 p {
         font-size: auto;
         color: var(--color-text-default-2)
+    }
+    .footnote {
+        display: none;
     }
 }
